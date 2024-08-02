@@ -1,16 +1,31 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #2e2e2e; /* Charcoal background */
+    color: #d3d3d3; /* Lighter text */
+    line-height: 1.8; /* Increase line height for better readability */
 }
 
-/* Header and Navigation */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: #1c1c1c; /* Slightly darker header */
+    color: #f5f5f5;
+    padding: 20px 0; /* Reduced padding */
+    text-align: center;
+    background-image: url('assets/header-bg.jpg'); /* Path to the background image */
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Header shadow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Reduced heading size */
+    font-weight: 700; /* Bold heading */
 }
 
 nav ul {
@@ -22,20 +37,122 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px; /* Increase spacing between menu items */
 }
 
 nav ul li a {
-    color: white;
+    display: inline-block;
+    padding: 12px 24px; /* Larger button padding */
+    color: #f5f5f5; /* Light text for links */
     text-decoration: none;
+    background: linear-gradient(45deg, #8a2be2, #7a3f91); /* Gradient background */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background: linear-gradient(45deg, #9370db, #6a2c77); /* Lighter gradient on hover */
+    transform: translateY(-2px); /* Lift effect */
 }
 
-/* Main Content */
 main {
+    margin-top: 120px; /* Ensure this is equal to or greater than the header height */
     padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increased shadow */
+    max-width: 800px; /* Adjust the maximum width to make the content thinner */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    margin: 100px auto 20px; /* Top margin to account for fixed header and center horizontally */
+    padding: 20px;
+    max-width: 800px; /* Max width for content */
+    background-color: #383838; /* Darker background for the container */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increased shadow */
+    border: 1px solid #444; /* Border for the frame effect */
+}
+
+footer {
+    background-color: #1c1c1c; /* Slightly darker footer */
+    color: #f5f5f5;
     text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    color: #5aa5d6; /* Light blue for links */
+    text-decoration: underline; /* Underline links */
+}
+
+a:hover {
+    color: #82c4e7; /* Lighter blue for hovered links */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+p {
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 20px; /* Add spacing above subheadings */
+}
+
+/* Fade-In CSS */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+/* Button Hover Animation */
+nav ul li a {
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Scroll-to-Top Button CSS */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8a2be2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-top-btn.show {
+    display: block;
+}
+
+.scroll-top-btn:hover {
+    background-color: #9370db;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #d3d3d3; /* Lighter text for links */
+    text-decoration: none;
+    background-color: #8a2be2; /* More purple color */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.download-btn:hover {
+    background-color: #9370db; /* Lighter purple on hover */
 }

@@ -1,25 +1,29 @@
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #2e2e2e; /* Charcoal background */
     color: #d3d3d3; /* Lighter text */
-    line-height: 1.8; /* Increase line height for better readability */
+    background-image: url('../assets/background.jpeg'); /* Path to your background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background-color: #1c1c1c; /* Slightly darker header */
     color: #f5f5f5;
-    padding: 20px 0; /* Reduced padding */
+    padding: 20px 0; /* Adjust padding as needed */
     text-align: center;
-    background-image: url('assets/header-bg.jpg'); /* Path to the background image */
     background-size: cover;
     background-position: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensures the header stays above other content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Header shadow */
 }
 
 header h1 {
@@ -60,10 +64,14 @@ main {
     padding: 20px;
     background-color: #1e1e1e;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increased shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     max-width: 800px; /* Adjust the maximum width to make the content thinner */
-    margin-left: auto;
+    margin-left: auto; /* Center the content horizontally */
     margin-right: auto;
+    position: relative; /* Ensure main content stays above background image */
+    z-index: 1;
+    background-color: rgba(30, 30, 30, 0.8); /* Semi-transparent background for main content */
+    flex: 1; /* Ensure main content expands to fill available space */
 }
 
 .container {
@@ -80,10 +88,30 @@ footer {
     background-color: #1c1c1c; /* Slightly darker footer */
     color: #f5f5f5;
     text-align: center;
-    padding: 10px 0;
-    position: absolute;
+    padding: 10px 0; /* Reduced padding for a more compact footer */
+    position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1000; /* Ensures the footer stays above other content */
+}
+
+footer .contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .contact-info img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+footer .contact-info div {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
 }
 
 a {
@@ -97,7 +125,9 @@ a:hover {
 }
 
 p {
-    margin-bottom: 20px; /* Add spacing between paragraphs */
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin-bottom: 1.5em; /* Add spacing between paragraphs */
 }
 
 h2, h3, h4, h5, h6 {

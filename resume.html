@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | My Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <title>Resume - Virtual CV Portfolio</title>
 </head>
 <body>
     <header>
-        <h1>My Resume</h1>
+        <h1>Welcome to My Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,14 +20,15 @@
         </nav>
     </header>
     <main>
-        <section id="resume">
+        <div class="container">
             <h1>My Resume</h1>
             <h2>Professional Experience</h2>
             <div class="experience">
                 <h3>IT Technician</h3>
-                <p><strong>10 Months:</strong> Febuary 2023 - November 2023</p>
-                <p>Building and maintaining IT infrastructure at various client companies.</p>
+                <p><strong>Duration:</strong> February 2023 - September 2023</p>
+                <p>Building and maintaining the IT infrastructure for various client companies</p>
             </div>
+ 
             <h2>Education</h2>
             <div class="education">
                 <h3>BSc in IT</h3>
@@ -38,11 +40,20 @@
             <ul>
                 <li>Python</li>
                 <li>Java</li>
-                <li>Web Development</li>
+                <li>Web development</li>
             </ul>
-            <a href="assets/your-resume.pdf" class="download-btn" download>Download Resume</a>
-        </section>
+            <a href="assets/Resume.pdf" class="download-btn" download>Download Resume</a>
+        </div>
     </main>
-    <script src="js/main.js"></script>
+    <footer>
+        <div class="contact-info">
+            <img src="assets/profile.jpg" alt="Profile Picture"> <!-- Path to your profile picture -->
+            <p>Marcel Volschenk</p>
+            <p>Email: <a href="mailto:yourname@example.com">marcelvol1998@gmail.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">083 265 8863</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourname" target="_blank">linkedin.com/in/marcel-volschenk-654888152</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/Marvol19</a></p>
+        </div>
+    </footer>
 </body>
 </html>
